@@ -973,23 +973,41 @@ with tab_rec:
                         # nflfastR: positive spread_line = home favored
                         # home covers if margin > spread_line
                         if am > vs + 0.5:
-                            (wk_ats_w := wk_ats_w+1) if r["ats_pick"] == r["home_team"] else (wk_ats_l := wk_ats_l+1)
+                            if r["ats_pick"] == r["home_team"]:
+                                wk_ats_w += 1
+                            else:
+                                wk_ats_l += 1
                         elif am < vs - 0.5:
-                            (wk_ats_w := wk_ats_w+1) if r["ats_pick"] == r["away_team"] else (wk_ats_l := wk_ats_l+1)
+                            if r["ats_pick"] == r["away_team"]:
+                                wk_ats_w += 1
+                            else:
+                                wk_ats_l += 1
                         else:
                             wk_ats_p += 1
 
                     if vt is not None:
                         at_ = ah + aa
                         if at_ > vt + 0.5:
-                            (wk_tot_w := wk_tot_w+1) if r["total_pick"]=="Over" else (wk_tot_l := wk_tot_l+1)
+                            if r["total_pick"] == "Over":
+                                wk_tot_w += 1
+                            else:
+                                wk_tot_l += 1
                         elif at_ < vt - 0.5:
-                            (wk_tot_w := wk_tot_w+1) if r["total_pick"]=="Under" else (wk_tot_l := wk_tot_l+1)
+                            if r["total_pick"] == "Under":
+                                wk_tot_w += 1
+                            else:
+                                wk_tot_l += 1
 
                     if ah > aa:
-                        (wk_ml_w := wk_ml_w+1) if r["home_win_prob"]>0.5 else (wk_ml_l := wk_ml_l+1)
+                        if r["home_win_prob"] > 0.5:
+                            wk_ml_w += 1
+                        else:
+                            wk_ml_l += 1
                     else:
-                        (wk_ml_w := wk_ml_w+1) if r["home_win_prob"]<0.5 else (wk_ml_l := wk_ml_l+1)
+                        if r["home_win_prob"] < 0.5:
+                            wk_ml_w += 1
+                        else:
+                            wk_ml_l += 1
 
                 cumulative["ats_w"] += wk_ats_w; cumulative["ats_l"] += wk_ats_l; cumulative["ats_p"] += wk_ats_p
                 cumulative["tot_w"] += wk_tot_w; cumulative["tot_l"] += wk_tot_l

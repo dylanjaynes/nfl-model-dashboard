@@ -82,8 +82,6 @@ load_schedule = rm.load_schedule
 @st.cache_data(show_spinner="Computing R-model metrics…")
 def build_metrics(season: int, through_week: int):
     """Returns (team_metrics, league_avgs, rankings)."""
-    if through_week == 0:
-        return rm.compute_r_metrics(season - 1, through_week=17)
     return rm.compute_r_metrics(season, through_week)
 
 
