@@ -1,0 +1,49 @@
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+.Rproj.user
+.Ruserdata
+.Rbuildignore
+.Rprofile
+.Renv
+/renv/library/
+*.xlsx
+*.rds
+*.RDS
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+
+# Parquet / data cache (too large for GitHub — re-downloaded by nfl_data_py at runtime)
+epa_model/cache/
+cache/
+weekly_output/
+data-raw/
+pbp_cache/
+tmp/
+
+# Grid / backtest results (local run artifacts)
+grid_results*.csv
+test_overnight*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+secrets.toml
+.streamlit/secrets.toml

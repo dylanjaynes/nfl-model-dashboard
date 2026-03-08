@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nfl-epa-app",
+      "runtimeExecutable": "/Users/dylanjaynes/Library/Python/3.9/bin/streamlit",
+      "runtimeArgs": ["run", "epa_model/app.py", "--server.port", "8501", "--server.headless", "true"],
+      "port": 8501
+    }
+    ,
+    {
+      "name": "nfl-r-model-app",
+      "runtimeExecutable": "/Users/dylanjaynes/Library/Python/3.9/bin/streamlit",
+      "runtimeArgs": ["run", "r_model/app.py", "--server.port", "8502", "--server.headless", "true"],
+      "port": 8502
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install nfl_data_py numpy pandas scipy pyarrow -q)",
+      "Bash(python epa_model/predict.py --season 2024 --week 18 --sims 5000)",
+      "Bash(python3 epa_model/predict.py --season 2024 --week 18 --sims 5000)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 epa_model/backtest.py --season 2025 --sims 2000)",
+      "Bash(python3 epa_model/backtest.py --season 2024 --sims 2000)",
+      "Bash(python3 epa_model/backtest_multi.py --seasons 2019 2020 2021 2022 2023 2024 --sims 2000)",
+      "Bash(python3 -:*)",
+      "Bash(python3 epa_model/backtest_v2.py --seasons 2019 2020 2021 2022 2023 2024 --sims 2000)",
+      "Bash(python3 epa_model/season_detail.py --season 2025 --sims 3000)",
+      "Bash(python3 epa_model/weekly.py --season 2025 --week 14 --sims 4000)",
+      "Bash(python3 epa_model/power_rankings.py --season 2025 --week 14 --sims 4000)",
+      "Bash(python3 epa_model/power_rankings.py --season 2025 --week 14 --sims 4000 --show-epa)",
+      "Bash(python3 epa_model/power_rankings.py --season 2025 --week 18 --sims 5000 --show-epa)",
+      "Bash(python3 epa_model/weekly.py --season 2025 --week 18 --sims 4000)",
+      "Bash(python3:*)",
+      "Bash(pip3 install streamlit plotly pyarrow -q)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(/Users/dylanjaynes/Library/Python/3.9/bin/python3 -c \"import urllib.request; print\\(urllib.request.urlopen\\(''http://localhost:8501''\\).getcode\\(\\)\\)\")",
+      "Bash(open http://localhost:8501)",
+      "WebFetch(domain:www.cfb-graphs.com)",
+      "WebFetch(domain:webcache.googleusercontent.com)",
+      "WebFetch(domain:cfbgraphs.substack.com)",
+      "Bash(gh auth status)",
+      "Bash(du -sh \"/Users/dylanjaynes/NFL Fast R/2025 Scripts/nflproj/epa_model/cache/\"*.parquet)",
+      "Bash(git init)",
+      "Bash(git add --all)"
+    ]
+  }
+}

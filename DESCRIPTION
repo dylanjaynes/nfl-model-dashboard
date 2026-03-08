@@ -1,0 +1,25 @@
+Package: nflproj
+Title: NFL Simulation and Backtesting Tools
+Version: 0.1.0
+Authors@R:
+    person("Dylan", "Jaynes", email = "dylan.jaynes@example.com", role = c("aut", "cre"))
+Description: Internal modeling, projection, and evaluation functions for NFL simulation, backtesting, and Monte Carlo analyses.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: R (>= 4.2)
+Imports:
+    dplyr,
+    purrr,
+    nflfastR,
+    nflreadr,
+    tibble,
+    truncnorm,
+    writexl,
+    furrr,
+    future,
+    parallelly,
+    progressr,
+    magrittr,
+    data.table
