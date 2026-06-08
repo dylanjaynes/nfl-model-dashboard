@@ -237,7 +237,7 @@ with tab_pr:
                 "Def YPC":   "{:.2f}",
                 "Def YPA":   "{:.2f}",
             })
-            .applymap(color_conf, subset=["Conf"])
+            .map(color_conf, subset=["Conf"])
         )
         st.dataframe(styled, use_container_width=True, hide_index=True)
 
